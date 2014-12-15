@@ -1,0 +1,94 @@
+<!--<link rel="stylesheet" href="__KINDEDITOR__/themes/default/default.css" />
+<script src="__KINDEDITOR__/kindeditor-min.js"></script>
+<script  src="__KINDEDITOR__/lang/zh_CN.js"></script>-->
+
+<js href="__PUBLIC__/js/jquery-2.0.2.js" />
+    <js href="__PUBLIC__/ueditor/ueditor.config.js" />    
+    <js href="__PUBLIC__/ueditor/ueditor.all.min.js" />
+    <script src="__PUBLIC__/admin/js/message.update.js"></script>
+    <script type="text/javascript">
+//    $(function(){
+//        KindEditor.create('textarea[name="content"]');
+//    });
+//  
+    $(function(){
+        
+        var ue = UE.getEditor('container',{
+            serverUrl :'{:U('Admin/Message/ueditor')}'
+        });
+        $("#btnadd").click(function() {
+        var title = $.trim($("input[name=title]").val());
+        var type = $.trim($("select[name=type]").val());
+        var nid = $(this).attr("nid");
+        var content = ue.getContent();
+        
+//        var content = $.trim($(document.getElementsByTagName("iframe")[0].contentWindow.document.body).html());
+            alert("__ROOT__/admin.php/Message/message_list");
+        $.post("__ROOT__/admin.php/Message/update_news", {
+            title: title,
+            type: type,
+            content: content,
+            nid: nid
+        }, function(data) {
+            if (data === '1') {
+                alert("修改成功");
+//                $("#right").load("__ROOT__/admin.php/Message/message_list");
+                window.location.href="__ROOT__/admin.php/Message/message_list";
+            } else if (data === '0') {
+                alert("服务器出错，请稍后再试!!!");
+            } else {
+                alert("内容为有改动!!!");
+            }
+        });
+    });
+        
+    });
+    
+</script>
+<style>
+   .divOver{
+                background:  #E0ECF9;
+                color: #33ccff;
+                /*border-left:2px solid #ddd;*/
+            }
+   .divClick{
+              background: #0066cc;
+              color: white;
+              /*font-weight: bold;*/
+            }
+</style>
+<input type="hidden" value="__ROOT__" id="root" />
+<div style="width:99%;height: 30px;line-height: 30px;font-size: 14px;font-weight: bold;color: blue;">
+       <div style="margin-left: 8px;">信息修改</div>
+            <div style="clear: both;"></div>
+</div>
+<form method="post">
+    <volist name="new_list" id="new">
+    <div class="row">
+        <span >标题：</span><input style="height:28px; width: 87%;"  type="text" name="title" value="{$new.title}">
+    </div>
+    <div class="row">
+        <span>类别：</span><select name="type" style="width: 87%; height: 28px;">
+                   <volist name="type_list" id="vo">
+                        <option value="{$vo.id}"<if condition="$vo.id eq $new_type">selected</if>>{$vo.type}</option>
+                   
+                     </volist>
+            </select>   
+        
+    </div>
+    <div class="row">
+        <script id="container" name="content" type="text/plain">
+        {$new.content}
+    </script>
+        <!--<textarea name="content" style="width:90%;height:480px;">{$new.content}</textarea>-->
+    </div>
+    </volist>
+</form>
+    <div class="row">
+        <span style="margin-right:18px;">
+            <input type="submit" id="btnadd" nid={$nid} style="width:60px; height: 24px;" value="提交">
+        </span><span style="margin-right:18px;">
+            <button id="reset" style="width:60px; height: 24px;">重置</button></span></span>
+    </div>
+
+

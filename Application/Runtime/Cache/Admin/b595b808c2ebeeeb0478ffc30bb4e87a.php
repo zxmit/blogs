@@ -1,0 +1,54 @@
+<?php if (!defined('THINK_PATH')) exit();?><html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>后台管理系统</title>
+        <link href="/Blogs/Public/admin/css/style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="/Blogs/Public/js/jquery-1.10.2.min.js"></script>
+        <style>
+            .divOver{
+                background:  #E0ECF9;
+                color: #33ccff;
+                /*border-left:2px solid #ddd;*/
+            }
+            .divClick{
+                background: #0066cc;
+                color: white;
+                /*font-weight: bold;*/
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                
+                $(".nav").hover(function() {
+                    $(this).addClass('divOver')
+                }, function() {
+                    //鼠标离开时移除divOver样式
+                    $(this).removeClass('divOver');
+                }
+                );
+
+                $('#show_notes').click(function() {
+                    //            alert('d' + $(this).href());
+                    $('#right').load($(this).attr('href'));
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body style='min-width:1320px'>
+        <div id="mainDiv" >
+            <input name="baseURL" value="/Blogs" type="hidden">
+
+                <div id="centerDiv">
+                    <div id="left">
+                        <iframe height="100%" width="100%" frameborder="0" src="/Blogs/admin.php/Index/left"
+                                scrolling="no" name="leftFrame"></iframe>
+                    </div>
+                    <div id="right">
+                        <iframe height="100%" width="100%" frameborder="0" src="/Blogs/admin.php/Note/note"
+                                scrolling="yes" name="right"></iframe>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>

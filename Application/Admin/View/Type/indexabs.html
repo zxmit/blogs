@@ -1,0 +1,115 @@
+<script type="text/javascript"> 
+$(function() { 
+    $("#CheckAll").click(function() { 
+        var flag = this.checked;
+        $("input[name=subBox]:checkbox").prop("checked",flag);
+    }) ;
+    $(".curd").click(function(){
+        var state = $(this).attr('rel');
+        var s = '';
+        var i = 1;
+        var num = $("input[name=subBox]:checked").length;
+        if(num==0){
+            alert('请选择要操作的文件');
+            return false;
+        }
+        $("input[name=subBox]:checked").each(function(){ 
+            if(num==1){
+                s="id='"+$(this).val()+"'"; 
+            }else{
+                if(i<num){
+                    s+="id='"+$(this).val()+"'||"; 
+                }else{
+                    s+="id='"+$(this).val()+"'"; 
+                }
+                i++;
+            }
+          }); 
+          $.post("__MODULE__/Type/curd",{
+                state:state,
+                condition:s 
+            },function(data){
+                var b = $("input[name=subBox]:checked");
+                if(data==1 && state==1){
+                    var c =  b.parents(".hk").children(".tu").children("img").attr("src","__IMG__/right.png");
+                }else if(data==1 && state==0){
+                    var c =  b.parents(".hk").children(".tu").children("img").attr("src","__IMG__/err.png");
+                }
+            });
+    });
+    
+    $(".GoPage").click(function(){
+        var tp = $(this).attr("tp");
+        if(tp==1){
+            var page = $(this).attr("rel");
+            var num = $("num").html();
+            if(page>num){
+                alert("已到最后一页");
+                return false;
+            }
+            if(page<1){
+                alert("当前为第一页");
+                return false;
+            }
+        }else{
+            var page = $("select[name=pageurl]").val();
+        }
+        $.get("__ROOT__/admin.php/Type/index",{
+            page:page
+        },function(data){
+            $("#content").html(data);
+           
+        });
+    });
+    
+    $(".editor").delegate('div','click',function(){
+        //var tt = $(this).parents("yui3-u publisherwidth").html();
+        alert(233);
+    }); 
+});
+</script> 
+<div id="current" class="txt_title">信息分类<span id="_ut" class="f_size normal black">(共&nbsp;<span id="_ut_c">{$count}</span><span id="_ua" >)，其中 <span id="_ur">待审文件<span id="_ur_c">0</span> 封</span></span></div>
+<div class="hk toolbg bg_rg toolbgline toolheight">
+       <div class="yui3-u-1-2" style="float: left;"><button class="curd" rel="0">删除</button><button class="curd" rel="1">通过</button><button>禁止</button></div>
+        <div class="yui3-u-1-2" style="float:right">
+            <font style="float: right;">
+                <page>{$page}</page>/<num>{$num1}</num>&nbsp;<span id="pre" class="GoPage" tp="1" rel="{$page-1}">上一页</span>&nbsp;<span id="next" class="GoPage" tp="1" rel="{$page+1}">下一页</span>&nbsp;
+                <select name="pageurl">
+                    <option value="{$page}">{$page}</option>
+                    <for start="1" end="$num1+1">
+                    <option value="{$i}">{$i}</option>
+                    </for>
+                </select>&nbsp;
+                <input type="button" tp="2" class="GoPage" name="submit" value="跳转"/>
+            </font>
+        </div>
+        <div style="clear: both"></div>
+</div>
+<div class="yui3-g">
+    <div class="hk toolbga bg_rg">
+        <div class="yui3-u rightline txtcenter checkwidth"><input class="checksize" id="CheckAll" name="CheckAll" type="checkbox" ></div>
+        <div class="yui3-u rightline txtcenter statewidth">状态</div>
+        <div class="yui3-u rightline txtcenter publisherwidth">排序</div>
+        <div class="yui3-u txtleft titlewidth">名称</div>
+        <div class="yui3-u txtleft timewidth"></div>
+        <div style="clear: both;"></div>
+    </div>
+</div>
+<volist name="list" id="vo" empty="暂无相关数据">
+<div class="yui3-g">
+    <div class="hk bg_rg hkbottomline">
+        <div class="yui3-u  txtcenter checkwidth marginright"><input class="checksize" name="subBox" type="checkbox" value="{$vo.id}" /></div>
+        <div class="yui3-u  txtcenter statewidth marginright tu">
+            <switch name="vo.state">
+                <case value="1">已启用</case>
+                <case value="2">已关闭</case>
+                <default />已启用
+            </switch>
+        </div>
+        <div class="yui3-u  txtcenter publisherwidth marginright">{$vo.position}</div>
+        <div class="yui3-u  txtleft titlewidth marginright">{$vo.type}</div>
+        <div class="yui3-u txtleft timewidth">&nbsp;<span class="editor" rel="{$vo.id}">编辑</span>&nbsp;&nbsp;&nbsp;<span class="curd" rel="0">删除</span>&nbsp;&nbsp;&nbsp;<span class="curd" rel="2">关闭</span></div>
+        <div style="clear: both;"></div>
+    </div>
+</div>
+</volist>

@@ -1,0 +1,72 @@
+<link href="__PUBLIC__/admin/css/note.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="__PUBLIC__/admin/js/note.js" ></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $(".GoPage").click(function() {
+            var tp = $(this).attr("tp");
+            
+            if(tp === '1') {
+                var page = $(this).attr("rel");
+            } else {
+                var page = $("select[name=pageurl]").val();
+            }
+            $("#right").load("__ROOT__/admin.php/Note/note_all?page="+page+"");
+        }); 
+   });
+</script>
+<div class="note_title">
+    <div class="note_title_content">信息管理</div>
+    <div style="clear: both;"></div>
+</div>
+
+<div class="note_message_head">
+    <include file="note_condition"/>
+    <div style="width:81%;float:left;">
+        <font style="float: right;">
+        <page>{$page}</page>/<num>{$totalPage}</num>&nbsp;
+        <if condition="$page != 1">
+            <span style="cursor: pointer" id="pre" class="GoPage" tp="1" rel="{$page-1}">上一页</span>&nbsp;
+        </if>
+        <if condition="$page != $totalPage">
+            <span style="cursor: pointer" id="next" class="GoPage" tp="1" rel="{$page+1}">下一页</span>&nbsp;
+        </if>
+        <select name="pageurl">
+            <for start="1" end="$totalPage+1">
+                <option value="{$i}" {$page==$i? 'selected':''} >{$i}</option>
+            </for>
+        </select>&nbsp;
+        <input type="button" tp="2" class="GoPage" name="submit" value="跳转"/>
+        </font>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<volist id="vo" name="notes">
+    <div class="note_message_info">
+        <input type="hidden" name="note_id" value="{$vo.id}">
+        <input type="hidden" name="news_id" value="{$vo.nid}">
+        
+        <div class="note_item">
+            <div>
+                <div class="content">
+                    <span><a href='__ROOT__/admin.php/Note/note_detail?nid={$vo.nid}&id={$vo.id}' class='detail_link' >{$vo.name} 回复：{$vo.note}</a></span>
+                </div>
+                <div class="time">
+                    <span>{$vo.time}</span>
+                </div>
+            </div>
+            <div>
+                <div class="title">
+                    <span>
+                        回复相关项目：“<a target="_blank" href="__ROOT__/index.php/Index/detail?id={$vo.nid}" style="color:#000; font-size: 13px;">{$vo.title}</a>”
+                    </span>
+                </div>
+                <div class="operate">
+                    <span class="note_item_del">
+                        <img src="__ADMIN__/images/close_normal.jpg">
+                        <a href="__ROOT__/admin.php/Note/note_del?id={$vo.id}" class="note_del" >删除</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</volist>

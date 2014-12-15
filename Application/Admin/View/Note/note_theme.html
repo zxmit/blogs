@@ -1,0 +1,111 @@
+<link href="__PUBLIC__/admin/css/note.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="__PUBLIC__/admin/js/note.js" ></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //关闭回复框
+        $('.close').click(function() {
+            $('.note_replayBtn:hidden').show();
+            $('.close:visible').hide();
+            $(this).parents('.note_item').find('.reply').hide();
+            return false;
+        });
+        //显示回复
+        $('.note_replayBtn').click(function() {
+            $('.reply:visible').hide();
+            $('.note_replayBtn:hidden').show();
+            $('.close:visible').hide();
+            $(this).hide();
+            $(this).next().show();
+            $(this).parents('.note_item').find('.reply').show();
+            $(this).parents('.note_item').find('.content').focus();
+            return false;
+        });
+        //回复留言
+        $('.replyBtn').click(function() {
+//            alert('');
+            var note_id = $(this).parents('.note_message_info').find("input[name='note_id']").val();
+            var note_reply = $.trim($(this).parents('.reply').find('.content').html());
+//           alert(note_reply +note_id + "  " + news_id);
+            if (note_reply !== '') {
+                $(this).val('Loading...');
+                $(this).attr("disabled", true);
+                $.post('__ROOT__/admin.php/Note/reply', {id: note_id, reply: note_reply}, function(data) {
+                    if (data === 'false') {
+                        $(this).removeAttr('disabled');
+                        alert('网络繁忙，请稍后再试');
+                    } else {
+                        $("#right").load('__ROOT__/admin.php/Note/note_list');
+                    }
+                });
+            }
+        });
+        $(".GoPage").click(function() {
+            var tp = $(this).attr("tp");
+            
+            if(tp === '1') {
+                var page = $(this).attr("rel");
+            } else {
+                var page = $("select[name=pageurl]").val();
+            }
+            $("#right").load("__ROOT__/admin.php/Note/note_theme?page="+page+"");
+        });
+    });
+</script>
+<div class="note_title">
+    <div class="note_title_content">信息管理</div>
+    <div style="clear: both;"></div>
+</div>
+
+<div class="note_message_head">
+    <include file='note_condition' />
+    <div style="width:81%;float:left;">
+        <font style="float: right;">
+        <page>{$page}</page>/<num>{$totalPage}</num>&nbsp;
+        <if condition="$page != 1">
+            <span style="cursor: pointer" id="pre" class="GoPage" tp="1" rel="{$page-1}">上一页</span>&nbsp;
+        </if>
+        <if condition="$page != $totalPage">
+            <span style="cursor: pointer" id="next" class="GoPage" tp="1" rel="{$page+1}">下一页</span>&nbsp;
+        </if>
+        <select name="pageurl">
+            <for start="1" end="$totalPage+1">
+                <option value="{$i}" {$page==$i? 'selected':''} >{$i}</option>
+            </for>
+        </select>&nbsp;
+        <input type="button" tp="2" class="GoPage" name="submit" value="跳转"/>
+        </font>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<volist id="vo" name="notes">
+    <div class="note_message_info">
+
+        <div class="note_item">
+            <div>
+                <div class="content">
+                    <a class='detail_link' href="__ROOT__/admin.php/Note/note_detail?nid={$vo.nid}">
+                        <if condition="$vo.count == 1">
+                            <span>{$vo.name}回复：{$vo.note}</span>
+                            <else />
+                            <span>
+                                {$vo.name} 等人回复主题，共有（
+                                <font style="font-size: 14px; font-weight: bold;color:red">{$vo.count}</font>
+                                ）条信息 
+                            </span>
+                        </if>
+                    </a>
+                </div>
+                <div class="time">
+                    <span>{$vo.time}</span>
+                </div>
+            </div>
+            <div>
+                <div class="title">
+                    <span>
+                        回复相关项目：“<a target="_blank" href="__ROOT__/index.php/Index/detail?id={$vo.nid}" style="color:#000; font-size: 13px;">{$vo.title}</a>”
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</volist>

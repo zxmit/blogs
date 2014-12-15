@@ -1,0 +1,127 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>后台管理系统</title>
+        <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="__JS__/jquery-1.10.2.min.js"></script>
+        <script src="__PUBLIC__/admin/js/message.list.js"></script>
+            <style>
+    a{
+        text-decoration: none;
+        color: #666666;
+    }
+    .divOver{
+        background: #F6F4F6;
+        color: #666666;
+        /*border-left:2px solid #ddd;*/
+    }
+
+    .divclick{
+        background: #E0ECF9;
+        color: #666666;
+        /*border-left:2px solid #ddd;*/
+    }
+</style>
+        </head>
+
+    <body id="right">
+<input type="hidden" value="__ROOT__" id="root" />
+<div style="width:99%;height: 30px;line-height: 30px;float: left;font-size: 14px;font-weight: bold;color: blue;">
+    <div style="margin-left: 8px; float: left; width: 20%;">信息管理</div>
+    <div style="width: 75%;float:right;height: 28px;line-height: 28px;">
+        <select name="type" style="width: 60%; height: 28px;">
+            <option value="0">------所有类型-----</option>
+            <volist name="type_list" id="vo">
+                <option value="{$vo.id}"<if condition ="$vo.id eq $id">selected</if>>{$vo.type}</option>
+            </volist>
+        </select>
+
+        <select name="state" style="width: 20%; height: 28px;">
+            <option value="0" <if condition="$state eq 0">selected</if>>---所有状态---</option>
+            <option value="1" <if condition="$state eq 1">selected</if>>启用</option>
+            <option value="2" <if condition="$state eq 2">selected</if>>关闭</option>
+        </select>
+
+        <button id="search" style="margin-left: 8px; margin-right: 8px; width:60px; height:28px;">检索</button>
+        <button id="public" style=" margin-left: 0px; margin-right: 8px; width:60px; height: 28px;">发布</button>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+
+<div class="message_info" style="width:99%;height: 30px;line-height: 30px;float: left;margin-top:8px;background:#c1d9f3;">
+
+    <div style="width:6%;float:left;">
+        <div style="margin-left: 10px;margin-top:4px;"><button state ="1" class="delete" style="width:50px;height: 22px;">删除</button></div>
+    </div>
+    <div style="width:6%;float:left;">
+        <div style="margin-left: 5px;margin-top:4px;"><button state="1" class="minitab" style="width:50px;height: 22px;">启用</button></div>
+    </div>
+    <div style="width:6%;float:left;">
+        <div style="margin-left: 5px;margin-top:4px;"><button state="1" class="close" style="width:50px;height: 22px;">关闭</button></div>
+    </div>
+    <div style="width:81%;float:left;">
+        <font style="float: right;">
+        <page>{$page}</page>/<num>{$num1}</num>&nbsp;<span id="pre" class="GoPage" tp="1" rel="{$page-1}">上一页</span>&nbsp;<span id="next" class="GoPage" tp="1" rel="{$page+1}">下一页</span>&nbsp;
+        <select name="pageurl">
+            <option value="{$page}">{$page}</option>
+            <for start="1" end="$num1+1">
+                <option value="{$i}">{$i}</option>
+            </for>
+        </select>&nbsp;
+        <input type="button" tp="2" class="GoPage" name="submit" value="跳转"/>
+        </font>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+
+<div style="width:99%;height: 23px;line-height: 23px;float: left;margin-top:8px;background: #F2F4F6;font-size: 14px;">
+    <div style="width:4%;float:left; text-align: center;">
+        <input type="checkbox" name="checkboxall" id="checkboxall">
+    </div>
+    <div style="width:6%;float:left;text-align: center;">
+        <div style="border-right: 1px solid #ddd; border-left: 1px solid #ddd;">状态</div>
+    </div>
+    <div style="width:10%;float:left;text-align: center;">
+        <div style="border-right: 1px solid #ddd;">时间</div>
+    </div>
+    <div style="width:64%;float:left;text-align: left;">
+        <div style="border-right: 1px solid #ddd;margin-left:10px;">标题</div>
+    </div>
+    <div style="width:15%;float:left;text-align: center;">
+        <div style="">操作</div>
+    </div>
+</div>
+<volist name="list" id="vo">
+    <div class="message_info mk" style="width:99%;height: 23px;line-height: 23px;float: left;margin-top:8px;border-bottom: 1px solid #ddd;font-size: 14px;">
+        <div style="width:4%;float:left; text-align: center;" class="first">
+            <input type="checkbox" name="checkbox" class="checkbox" nid="{$vo.id}">
+        </div>
+        <div style="width:6%;float:left;text-align: center;">
+            <div class="state">
+                <if condition="$vo.state eq 1">
+                    已启用<elseif condition="$vo.state eq 2" />
+                    已关闭
+                </if>
+            </div>
+        </div>
+        <div style="width:10%;float:left;text-align: center;">
+            <div >{$vo.time}</div>
+        </div>
+        <div style="width:64%;float:left;text-align: left;">
+            <div style="margin-left:10px;"><a href="__ROOT__/Home/Index/detail/id/{$vo.id}" target="__bank()" title="{$vo.title}">{$vo.title}</a></div>
+        </div>
+        <div style="width:15%;float:left;text-align: center;">
+            <div class="operation" nid = "{$vo.id}">
+                <span class="update" style="cursor: pointer">修改</span>
+                <span class="delete" style="cursor: pointer" state="2">删除</span>
+                <if condition="$vo.state eq 1">
+                    <span class="close" style="cursor: pointer" state="2">关闭</span>
+                    <elseif condition="$vo.state eq 2" />
+                    <span class="minitab" style="cursor: pointer" state="2">启用</span>
+                </if>
+            </div>
+        </div>
+    </div>
+</volist>
+</body>
+

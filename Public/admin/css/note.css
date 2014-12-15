@@ -1,0 +1,94 @@
+a{
+    text-decoration: none;
+    color: #4F4FF5;
+}
+.note_title{
+    width:100%;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    font-size: 14px;
+    color: blue;
+}
+.note_title_content{
+    margin-left: 8px;
+    float: left;
+    width: 20%;
+    font-weight: bold;
+} 
+.note_message_head {
+    width:100%;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-top:8px;
+    background:#c1d9f3;
+}
+.note_item {
+    min-height: 60px;
+    padding: 0 10px 0px;
+    width: 98%;
+    float: left;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(221, 221, 221);
+}
+.note_item .content {
+    padding-bottom: 6px;width: 80%;float: left;
+}
+.note_item .content span{
+    color: #4F4FF5;font-size: 14px;
+}
+.note_item .time{
+    text-align: right;width: 20%;float: left;
+}
+.note_item .time span{
+    font-size: 12px; color: #b4b4b4;
+}
+.note_item .title{
+    width: 80%;float: left;
+}
+.note_item .title span{
+    font-size: 13px; color: #b4b4b4;font-weight: lighter
+}
+.note_item .operate{
+    text-align: right;width: 20%;float: left;line-height: 30px;height: 30px;
+}
+.note_item .operate a{
+    color:rgb(92, 92, 92); font-size: 13px;
+}
+.note_item .operate .note_item_del{
+    display: none;
+}
+.note_item .operate .close {
+    display: none;
+}
+
+.note_item .reply {
+    display: none;
+}
+.note_item .reply .replydiv{
+    padding: 10px 20px 0 20px;float: left;width: 92%;
+}
+.note_item .reply .replydiv .content{
+    padding-left: 5px;line-height: 18px; min-height: 40px;width: 100%;color: #000;border: 1px solid #D6DFFB;background-color: #fff;
+}
+.note_item .reply .replydiv2 {
+    padding: 10px 10px 10px 20px;font-size: 16px;float: left;width: 100%;
+}
+.note_replyworming {
+    font-size: 12px;font-weight: lighter;float: left;width: 87%;color: #696969;
+}
+.replydiv2 .btndiv {
+    text-align: left;float: left;width: 13%;
+}
+.replydiv2 .replyBtn {
+    border: 1px solid white;background-color: rgb(81, 81, 219);height: 30px;width: 60px;cursor: pointer;
+}
+.note_message_info {
+    width:100%;
+    min-height: 46px;
+    line-height: 23px;
+    float: left;
+    padding-top:8px;
+    border-bottom: 1px solid #ddd;
+}

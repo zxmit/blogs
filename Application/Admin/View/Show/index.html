@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>编辑器的使用</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+	<script charset="utf-8" src="__KINDEDITOR__/kindeditor-min.js"></script>
+    <script>
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = K.create('textarea[name="content"]', {
+					allowFileManager : true
+				});
+                           K('input[name=getHtml]').click(function(e) {
+					alert(editor.html());
+				});
+			});
+		</script>
+   <body>
+        <div>index页面</div>
+       <form>
+        <textarea name="content" style="width:800px;height:400px;visibility:hidden;">KindEditor</textarea>
+    </body>
+    <input type="button" name="getHtml" value="取得HTML" /><input type="reset" name="reset" value="Reset" />
+</form>
+</html>

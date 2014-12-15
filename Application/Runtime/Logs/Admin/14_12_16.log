@@ -1,0 +1,383 @@
+[ 2014-12-16T00:00:28+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/update_news
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001211s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004462s ]
+NOTIC: [8] Undefined index: id D:\wamp\www\Blogs\Application\Admin\Controller\MessageController.class.php 第 217 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+
+[ 2014-12-16T00:02:11+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/publish_messageadd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001406s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.005839s ]
+NOTIC: [8] Undefined index: id D:\wamp\www\Blogs\Application\Admin\Controller\MessageController.class.php 第 174 行.
+SQL: INSERT INTO `blogs_news` (`title`,`type`,`publisher`,`time`,`content`,`state`) VALUES ('了',1,null,'2014-12-16','<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;开始使用\n &nbsp; &nbsp; &nbsp; &nbsp;</p>',1) [ RunTime:0.002174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001097s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001220s ]
+
+[ 2014-12-16T00:02:58+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/publish_messageadd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001681s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004335s ]
+NOTIC: [8] Undefined index: id D:\wamp\www\Blogs\Application\Admin\Controller\MessageController.class.php 第 174 行.
+SQL: INSERT INTO `blogs_news` (`title`,`type`,`publisher`,`time`,`content`,`state`) VALUES ('吗',3,null,'2014-12-16','<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;开始使用\n &nbsp; &nbsp; &nbsp; &nbsp;</p>',1) [ RunTime:0.001933s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000960s ]
+
+[ 2014-12-16T00:03:43+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/delete_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004196s ]
+SQL: UPDATE `blogs_news` SET `state`=0 WHERE ( id in (32,31,0 ) ) [ RunTime:0.002428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000931s ]
+
+[ 2014-12-16T00:03:43+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004039s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004329s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 40 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 41 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000821s ]
+
+[ 2014-12-16T00:03:51+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004415s ]
+SQL: UPDATE `blogs_news` SET `state`=2 WHERE ( id in (30,0 ) ) [ RunTime:0.003645s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000934s ]
+
+[ 2014-12-16T00:03:54+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004385s ]
+SQL: UPDATE `blogs_news` SET `state`=2 WHERE ( id in (30,0 ) ) [ RunTime:0.001834s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000946s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2014-12-16T00:03:57+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/minitab_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001285s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004209s ]
+SQL: UPDATE `blogs_news` SET `state`=1 WHERE ( id in (30,0 ) ) [ RunTime:0.002312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000958s ]
+
+[ 2014-12-16T00:04:01+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001425s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004530s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000393s ]
+SQL: UPDATE `blogs_news` SET `state`=2 WHERE ( id in (30,0 ) ) [ RunTime:0.000936s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000867s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000987s ]
+
+[ 2014-12-16T00:04:02+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001201s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004306s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000914s ]
+
+[ 2014-12-16T00:04:03+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.005179s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2014-12-16T00:04:04+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001325s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.005199s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001137s ]
+
+[ 2014-12-16T00:04:16+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/publish_messageadd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001257s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004397s ]
+NOTIC: [8] Undefined index: id D:\wamp\www\Blogs\Application\Admin\Controller\MessageController.class.php 第 174 行.
+SQL: INSERT INTO `blogs_news` (`title`,`type`,`publisher`,`time`,`content`,`state`) VALUES ('，',2,null,'2014-12-16','<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;开始使用\n &nbsp; &nbsp; &nbsp; &nbsp;</p>',1) [ RunTime:0.001950s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000823s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2014-12-16T00:04:20+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/delete_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004577s ]
+SQL: UPDATE `blogs_news` SET `state`=0 WHERE ( id in (33) ) [ RunTime:0.001784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000915s ]
+
+[ 2014-12-16T00:04:20+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004701s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004138s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 36 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 40 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 41 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015349s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000776s ]
+
+[ 2014-12-16T00:04:26+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/minitab_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001149s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004389s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30) AND state=1 ) LIMIT 1   [ RunTime:0.000338s ]
+SQL: UPDATE `blogs_news` SET `state`=1 WHERE ( id in (30) ) [ RunTime:0.001810s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000932s ]
+
+[ 2014-12-16T00:04:27+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001858s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004583s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000435s ]
+SQL: UPDATE `blogs_news` SET `state`=2 WHERE ( id in (30,0 ) ) [ RunTime:0.002199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000965s ]
+
+[ 2014-12-16T00:04:28+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001834s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004461s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000387s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000913s ]
+
+[ 2014-12-16T00:04:29+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001484s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.005307s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001130s ]
+
+[ 2014-12-16T00:04:29+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001704s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004381s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000948s ]
+
+[ 2014-12-16T00:04:29+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001234s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004261s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000384s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001205s ]
+
+[ 2014-12-16T00:04:30+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004173s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000825s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2014-12-16T00:04:30+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001464s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004182s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000936s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001023s ]
+
+[ 2014-12-16T00:04:31+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001438s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004359s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000931s ]
+
+[ 2014-12-16T00:04:31+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004405s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2014-12-16T00:04:31+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001682s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004308s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000915s ]
+
+[ 2014-12-16T00:04:31+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001489s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004585s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000820s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000927s ]
+
+[ 2014-12-16T00:04:31+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001453s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004709s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000878s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000957s ]
+
+[ 2014-12-16T00:04:32+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001222s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000396s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2014-12-16T00:04:32+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001437s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004299s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000847s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2014-12-16T00:04:32+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001508s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004278s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000892s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000970s ]
+
+[ 2014-12-16T00:04:32+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/close_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001404s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004696s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30,0 ) AND state=2 ) LIMIT 1   [ RunTime:0.000428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000949s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001033s ]
+
+[ 2014-12-16T00:04:40+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/minitab_message
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004408s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( id in (30) AND state=1 ) LIMIT 1   [ RunTime:0.000380s ]
+SQL: UPDATE `blogs_news` SET `state`=1 WHERE ( id in (30) ) [ RunTime:0.001726s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000888s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+

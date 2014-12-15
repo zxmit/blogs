@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            a{
+                text-decoration: none;
+                color: #666666;
+            }
+            .divOver{
+                background: #F2F4F6;
+                color: #33ccff;
+                /*border-left:2px solid #ddd;*/
+            }
+            .divclick{
+                background: #E0ECF9;
+                color: #33ccff;
+                /*border-left:2px solid #ddd;*/
+            }
+        </style>
+        <script src="__PUBLIC__/admin/js/classify.js"></script>
+    </head>
+    <body id="right">
+        <input type="hidden" value="__ROOT__" id="root" />
+        <div style="width:99%;height: 30px;line-height: 30px;float: left;font-size: 14px;font-weight: bold;color: blue;">
+            <div style="margin-left: 8px; float: left; width: 20%;">分类管理</div>
+            <div style="width: 30%;float:right;height: 28px;line-height: 28px;">
+                <select name="type" style="width:35%; height: 28px;">
+                    <option value="0" <if condition="$type eq 0"> selected</if>>---所有状态---</option>
+                    <option value="1" <if condition="$type eq 1">selected</if>>启用</option>
+                    <option value="2" <if condition="$type eq 2">selected</if>>关闭</option>
+                </select>
+                <button id="search" style="margin-left: 8px; margin-right: 8px; width:60px; height:28px;">检索</button>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+
+        <div class="classify_info" style="width:99%;height: 30px;line-height: 30px;float: left;margin-top:8px;background:#c1d9f3;">
+
+            <div style="width:6%;float:left;">
+                <div style="margin-left: 10px;"><button class="delete" style="width:50px;height: 22px;" state="1">删除</button></div>
+            </div>
+            <div style="width:6%;float:left;">
+                <div style="margin-left: 5px;"><button class="minitab" style="width:50px;height: 22px;"state="1">启用</button></div>
+            </div>
+            <div style="width:6%;float:left;">
+                <div style="margin-left: 5px;"><button class="close" style="width:50px;height: 22px;"state="1">关闭</button></div>
+            </div>
+            <div style="width:8%;float:left;">
+                <div style="margin-left: 5px;"><button class="add_type" style="width:70px;height: 22px;">添加类型</button></div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <div class="mk" style="width:99%;height: 23px;line-height: 23px;float: left;margin-top:8px;background: #F2F4F6;">
+            <div style="width:4%;float:left;">
+                <div style="margin-left: 10px;border-right: 1px solid #ddd;"><input type="checkbox" name="checkboxall" id="checkboxall"></div>
+            </div>
+            <div style="width:6%;float:left;text-align: center;">
+                <div style="border-right: 1px solid #ddd;">状态</div>
+            </div>
+            <div style="width:6%;float:left;text-align: center;">
+                <div style="border-right: 1px solid #ddd;">位置</div>
+            </div>
+            <div style="width:68%;float:left;text-align: left;">
+                <div style="border-right: 1px solid #ddd;margin-left:10px;">类型</div>
+            </div>
+            <div style="width:15%;float:left;text-align: center;">
+                <div style="">操作</div>
+            </div>
+        </div>
+    <volist name="list" id="vo">
+        <div class="classify_info mk" style="width:99%;height: 23px;line-height: 23px;float: left;margin-top:8px;border-bottom: 1px solid #ddd;font-size:14px">
+            <div style="width:4%;float:left;">
+                <div style="margin-left: 10px;border-right: 1px solid #ddd;"><input type="checkbox" name="checkbox" class="checkbox" nid="{$vo.id}"></div>
+            </div>
+            <div style="width:6%;float:left;text-align: center;">
+                <div class="state">
+                    <if condition="$vo.state eq 1">
+                        启用<elseif condition="$vo.state eq 2" />
+                        关闭
+                    </if>
+                </div>
+            </div>
+            <div style="width:6%;float:left;text-align: center;">
+                {$vo.position}
+            </div>
+
+            <div style="width:68%;float:left;text-align: left;">
+                <div style="margin-left:10px;"><a href="#" title="{$vo.type}">{$vo.type}</a></div>
+            </div>
+            <div style="width:15%;float:left;text-align: center;">
+                <div class="operation" nid = "{$vo.id}">
+                    <span class="update" style="cursor: pointer" >修改</span>
+                    <span class="delete" style="cursor: pointer" state="2">删除</span>
+                    <!--                       <span class="minitab" style="cursor: pointer">启用</span>&nbsp;&nbsp;
+                                           <span class="close" style="cursor: pointer">关闭</span>-->
+
+                    <if condition="$vo.state eq 1">
+                        <span class="close" style="cursor: pointer"state="2">关闭</span>
+                        <elseif condition="$vo.state eq 2" />
+                        <span class="minitab" style="cursor: pointer"state="2">启用</span>
+                    </if>
+                </div>
+            </div>
+        </div>
+    </volist>
+
+
+    <div class="add_typeview" style="width:99%;height: 23px;line-height: 23px;float: left;margin-top:8px;display: none;">
+        <div style="width:5%;float:left;">
+            <div style="margin-left: 10px;">类型:</div>
+        </div>
+        <div style="width:15%;float:left;">
+            <div style="margin-left: 3px;"><input type="text" name="type"></div>
+        </div>
+        <div style="width:5%;float:left;">
+            <div style="margin-left: 3px;"><button id="add_type">添加</button></div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+</body>
+</html>

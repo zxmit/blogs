@@ -1,0 +1,105 @@
+<link href="__PUBLIC__/admin/css/note.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="__PUBLIC__/admin/js/note.js" ></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //关闭回复框
+        $('.close').click(function() {
+            $('.note_replayBtn:hidden').show();
+            $('.close:visible').hide();
+            $(this).parents('.note_item').find('.reply').hide();
+            return false;
+        });
+        //显示回复
+        $('.note_replayBtn').click(function() {
+            $('.reply:visible').hide();
+            $('.note_replayBtn:hidden').show();
+            $('.close:visible').hide();
+            $(this).hide();
+            $(this).next().show();
+            $(this).parents('.note_item').find('.reply').show();
+            $(this).parents('.note_item').find('.content').focus();
+            return false;
+        });
+        //回复留言
+        $('.replyBtn').click(function() {
+//            alert('');
+           var note_id = $(this).parents('.note_message_info').find("input[name='note_id']").val();
+           var note_reply = $.trim($(this).parents('.reply').find('.content').html());
+//           alert(note_reply +note_id + "  " + news_id);
+           if(note_reply !== '') {
+               $(this).val('Loading...');
+               $(this).attr("disabled", true);
+//               var rediv = $(this);
+               $.post('__ROOT__/admin.php/Note/reply', {id:note_id, reply:note_reply}, function(data) {
+                   if(data === 'false') {
+                       $(this).removeAttr('disabled');
+                       alert('网络繁忙，请稍后再试');
+                   }else {
+                       $("#right").load('__ROOT__/admin.php/Note/note_list');
+                   }
+                });
+           }
+        });
+//        
+    });
+</script>
+<div class="note_title">
+    <div class="note_title_content">信息管理</div>
+    <div style="clear: both;"></div>
+</div>
+
+<div class="note_message_head">
+    
+    <include file="note_condition"/>
+    
+    <div style="clear:both;"></div>
+</div>
+<volist id="vo" name="notes">
+    <div class="note_message_info">
+        <input type="hidden" name="note_id" value="{$vo.id}">
+        <input type="hidden" name="news_id" value="{$vo.nid}">
+        <div class="note_item">
+            <div>
+                <div class="content">
+                    <span><a href='__ROOT__/admin.php/Note/note_detail?nid={$vo.nid}&id={$vo.id}' class='detail_link' >{$vo.name} 回复：{$vo.note}</a></span>
+                </div>
+                <div class="time">
+                    <span>{$vo.time}</span>
+                </div>
+            </div>
+            <div>
+                <div class="title">
+                    <span>
+                        回复相关项目：“<a target="_blank" href="__ROOT__/index.php/Index/detail?id={$vo.nid}" style="color:#000; font-size: 13px;">{$vo.title}</a>”
+                    </span>
+                </div>
+                <div class="operate">
+                    <span class="note_item_del">
+                        <img src="__ADMIN__/images/close_normal.jpg">
+                        <a href="__ROOT__/admin.php/Note/note_del?id={$vo.id}" class="note_del" >删除</a>
+                    </span>
+                    <span>
+                        <img src="__ADMIN__/images/replyPop_781acc0d.gif">
+                        <a href="#" class="note_replayBtn">回复</a>
+                        <a href="#" class="close">关闭</a>
+                    </span>
+                </div>
+            </div>
+            <div class="reply">
+                <div class="replydiv">
+                    <div contenteditable="true" class="content">
+                    </div>
+                </div>
+                <div class="replydiv2">
+                    <div class="note_replyworming">
+                        回复不能超过150字
+                    </div>
+                    
+                    <div class="btndiv">
+                        <input type="button" class="replyBtn" value="回复">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</volist>

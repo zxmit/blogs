@@ -1,0 +1,1699 @@
+[ 2014-10-30T12:24:03+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:26:12+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: num D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 41 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:26:28+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: num D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 41 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state!=2 and note.nid = news.id order by note.time desc limit 0 , 4  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 25 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:26:31+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note_new
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state=0 and note.nid = news.id order by note.time desc  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: all D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\3f795e387e4cc8206c0527bb9dfba2ea.php 第 61 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\3f795e387e4cc8206c0527bb9dfba2ea.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:26:32+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note_theme
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 95 行.
+SQL:  select count(*) as count from (select news.id from blogs_news as news, blogs_note as note where note.state!=2 and note.nid = news.id group by news.id) as c  [ RunTime:0.027002s ]
+SQL:  select count(*) as count, note.nid, news.title,notel.name, notel.time, notel.note from blogs_note as note, blogs_news as news, (select n.id as id, n.time as time, n.name as name, n.note as note from blogs_note as n where n.state!=2 order by n.time desc) as notel where note.id = notel.id and note.state!=2 and note.nid=news.id group by nid order by notel.time desc limit 0 , 2  [ RunTime:0.193011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\401c46f5e65eaa2b9782fedb36ee904f.php 第 62 行.
+NOTIC: [8] Undefined variable: all D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\401c46f5e65eaa2b9782fedb36ee904f.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:26:32+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note_all
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state!=2 and note.nid = news.id order by note.time desc limit 0 , 4  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 25 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:26:34+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note_detail?nid=13&id=8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL:  select news.id, news.title, news.content, news.time, type.type from blogs_news as news, blogs_type as type where news.id = 13 and news.type = type.id  [ RunTime:0.001000s ]
+SQL:  select * from blogs_note where nid = 13 and state != 2  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004000s ]
+SQL: UPDATE `blogs_note` SET `state`=1 WHERE `id` = 8 [ RunTime:0.066004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 50 行.
+NOTIC: [8] Undefined variable: all D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 56 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:26:35+08:00 ] 127.0.0.1 /Blogs/admin.php/Base/medpwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:26:37+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:26:39+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:26:40+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:27:47+08:00 ] 127.0.0.1 /Blogs/admin.php/Base/medpwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_email`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:27:48+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:28:22+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: num D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 34 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state!=2 and note.nid = news.id order by note.time desc limit 0 , 4  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 25 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:28:23+08:00 ] 127.0.0.1 /Blogs/admin.php/Base/medpwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `blogs_email`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:28:23+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.012001s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:28:24+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:28:25+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:28:31+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2014-10-30T12:28:46+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:28:47+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.051003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 313 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:29:34+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:29:34+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 309 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 313 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:30:48+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:30:49+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:31:24+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:25+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:25+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:26+08:00 ] 127.0.0.1 /Blogs/admin.php/Base/medpwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `blogs_email`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:27+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2014-10-30T12:32:27+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:28+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note?num=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state=0 and note.nid = news.id order by note.time desc  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: all D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\3f795e387e4cc8206c0527bb9dfba2ea.php 第 61 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\3f795e387e4cc8206c0527bb9dfba2ea.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:29+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note_all
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state!=2 and note.nid = news.id order by note.time desc limit 0 , 4  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 25 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:29+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note_theme
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 88 行.
+SQL:  select count(*) as count from (select news.id from blogs_news as news, blogs_note as note where note.state!=2 and note.nid = news.id group by news.id) as c  [ RunTime:0.000000s ]
+SQL:  select count(*) as count, note.nid, news.title,notel.name, notel.time, notel.note from blogs_note as note, blogs_news as news, (select n.id as id, n.time as time, n.name as name, n.note as note from blogs_note as n where n.state!=2 order by n.time desc) as notel where note.id = notel.id and note.state!=2 and note.nid=news.id group by nid order by notel.time desc limit 0 , 2  [ RunTime:0.007000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\401c46f5e65eaa2b9782fedb36ee904f.php 第 62 行.
+NOTIC: [8] Undefined variable: all D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\401c46f5e65eaa2b9782fedb36ee904f.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:30+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note_detail?nid=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 140 行.
+SQL:  select news.id, news.title, news.content, news.time, type.type from blogs_news as news, blogs_type as type where news.id = 13 and news.type = type.id  [ RunTime:0.000000s ]
+SQL:  select * from blogs_note where nid = 13 and state != 2  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.014001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 50 行.
+NOTIC: [8] Undefined variable: all D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 56 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:32:36+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/reply
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004000s ]
+SQL: UPDATE `blogs_note` SET `fnote`='cdcdcd',`ftime`='2014-10-30',`fname`='1',`state`=1 WHERE `id` = 8 [ RunTime:0.015001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:36+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note_detail?id=8&nid=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL:  select news.id, news.title, news.content, news.time, type.type from blogs_news as news, blogs_type as type where news.id = 13 and news.type = type.id  [ RunTime:0.001000s ]
+SQL:  select * from blogs_note where nid = 13 and state != 2  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004000s ]
+SQL: UPDATE `blogs_note` SET `state`=1 WHERE `id` = 8 [ RunTime:0.018001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 50 行.
+NOTIC: [8] Undefined variable: all D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 56 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 63 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 110 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\9e65cdabdf5d1b35cd4b72aba007b793.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:43+08:00 ] 127.0.0.1 /Blogs/admin.php/Base/medpwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `blogs_email`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:44+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:32:44+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:51+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:52+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:32:54+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/update_messageUI
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003000s ]
+
+[ 2014-10-30T12:33:41+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: num D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 34 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state!=2 and note.nid = news.id order by note.time desc limit 0 , 4  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 25 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:33:42+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:33:43+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/update_messageUI
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( id = '23' )  [ RunTime:0.000000s ]
+SQL: SELECT `type` FROM `blogs_news` WHERE ( id='23' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:33:56+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/update_news
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: id D:\wamp\www\Blogs\Application\Admin\Controller\MessageController.class.php 第 214 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( title='' AND type='' AND content='' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `blogs_news` SET `title`='',`type`=0,`publisher`=null,`time`='2014-10-30',`content`='' WHERE ( id='23' ) [ RunTime:0.024002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:33:58+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:34:01+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/update_messageUI
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( id = '23' )  [ RunTime:0.000000s ]
+SQL: SELECT `type` FROM `blogs_news` WHERE ( id='23' ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:34:05+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:34:07+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:34:13+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:34:14+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:34:14+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:34:15+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:35:36+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T12:35:42+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: num D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 34 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state!=2 and note.nid = news.id order by note.time desc limit 0 , 4  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 25 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:35:43+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 310 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 314 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T12:36:02+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 317 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T17:11:40+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: num D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 34 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state!=2 and note.nid = news.id order by note.time desc limit 0 , 4  [ RunTime:0.006000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 25 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T17:11:42+08:00 ] 127.0.0.1 /Blogs/admin.php/Base/medpwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_email`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T17:11:42+08:00 ] 127.0.0.1 /Blogs/admin.php/Classify/classify_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 ) ORDER BY position  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 382 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 383 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\2e40f1256a3c94baa691de060e62c347.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T17:11:43+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.158009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 317 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T17:11:45+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/update_messageUI
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( id = '23' )  [ RunTime:0.024001s ]
+SQL: SELECT `type` FROM `blogs_news` WHERE ( id='23' ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T17:11:47+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 317 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T17:12:55+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 317 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T17:12:56+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 311 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 315 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 317 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T17:14:38+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: num D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 34 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state!=2 and note.nid = news.id order by note.time desc limit 0 , 4  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 25 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T17:14:39+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 317 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T17:14:59+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 317 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T17:15:00+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 317 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-30T17:18:21+08:00 ] 127.0.0.1 /Blogs/admin.php/Note/note
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: num D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 34 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\Blogs\Application\Admin\Controller\NoteController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `blogs_note` [ RunTime:0.005001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_note` WHERE ( state!=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL:  select note.id, note.note, note.time, note.name, note.nid, news.title from blogs_note as note, blogs_news as news where note.state!=2 and note.nid = news.id order by note.time desc limit 0 , 4  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: new D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 25 行.
+NOTIC: [8] Undefined variable: theme D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\dff53d34fd6268253a215921b9617fde.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-30T17:18:22+08:00 ] 127.0.0.1 /Blogs/admin.php/Message/message_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state>0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blogs_news` WHERE ( state>0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `blogs_news` WHERE ( state>0 ) ORDER BY id desc LIMIT 0,12   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: id D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 312 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 316 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 317 行.
+NOTIC: [8] Undefined variable: state D:\wamp\www\Blogs\Application\Runtime\Cache\Admin\e56abf6b0ff5e3c0bef7940828dee56e.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

@@ -1,0 +1,125 @@
+<link href="__PUBLIC__/admin/css/note.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="__PUBLIC__/admin/js/note.js" ></script>
+<style>
+    span{
+        line-height: 20px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var id, nid;
+        $('.reply_btn').click(function() {
+            id = $(this).parents('.note_items').find("input[name='reply_id']").val();
+            nid = $("input[name='reply_nid']").val();
+            var name = $(this).parents('.note_items').find('.reply_name').html();
+            var content = $.trim($(this).parents('.note_items').find('.reply_fnote').html());
+            if(content === '') {
+                $('.reply_content').text("回复 "+name+":");
+            }else {
+                $('.reply_content').text("回复 "+name+":"+content.replace('&nbsp;',''));
+            }
+            $('.reply_div').show();
+        });
+        $('.reply_content').focusin(function() {
+           $('.submitBtn').removeAttr('disabled');
+           $(this).html(''); 
+        });
+        $(".submitBtn").click(function() {
+            var content = $.trim($(".reply_content").html());
+            $(this).attr('disabled', true);
+            if(content === '') {
+                return false;
+            }
+            
+            $.post('__ROOT__/admin.php/Note/reply', {id:id, reply:content}, function() {
+                $('.reply_div').hide();
+                $('#right').load("__ROOT__/admin.php/Note/note_detail?id="+id+"&nid="+nid+"");
+                $(this).removeAttr('disabled');
+            });
+        });
+    });
+</script>
+<div>
+    <div class="note_title">
+        <div class="note_title_content">信息管理</div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="note_message_head">
+        <include file="note_condition"/>
+        <div style="width:81%;float:left;">
+            <font style="float: right;">
+            
+            </font>
+        </div>
+        <div style="clear:both;"></div>
+        <div style="padding: 10px; position:relative">
+            <input type="hidden" value="{$news.id}" name="reply_nid" />
+            <div class="block_home_post" style="padding-bottom: 10px">
+
+                <div class="text">
+                    <p class="title">{$news.title}</p>
+                    <div class="date"><p>{$news.time} | 来源：{$news.type}</p></div>
+                </div>
+            </div>
+            <div class="intro">
+                &nbsp;&nbsp;&nbsp;&nbsp;{$news.content}                </div>
+            <br/>
+            <div style="position: relative;/* padding-top: 13px; */ border: 1px solid #ddd; background-color: #f7f8fa">
+                <div>
+                    <span style="position: absolute; top: -10px;font-size: 16px;left: 30px;color: #ddd;">◆</span>
+                    <span style="position: absolute; top: -9px;font-size: 16px;left: 30px;color: #f7f7f7;">◆</span>
+                </div>
+                <volist id='vo' name="news.notes">
+                    <div style="padding: 10px 20px 10px 20px;" class="note_items">
+                        <input type="hidden" value="{$vo.id}" name="reply_id" />
+                        <div style=" border-bottom: 1px dotted #ddd">
+                            <div style="width: 100%;">
+                                <span style="font-size: 16px">
+                                    <a class="reply_name" href="#" style="color: #2d64b3">{$vo.name}</a>
+                                </span>
+                                <span style="font-size: 14px; color: #858585">{$vo.time}</span>                                    
+                            </div>
+                            <div style="text-align: left;">
+                                <span style="font-size: 12px;">{$vo.note}</span>
+                            </div>
+                            <div style="text-align: right;">
+                             <if condition="$vo.fname == ''">
+                                 <span class="reply_btn" style="font-size: 13px;cursor: pointer; text-align: right">回复</span>
+                                </if>
+                                </div>
+                        
+                        <if condition="$vo.fname != ''">
+                            <div style="margin: 0 10px 0 10px">
+                            <div style="width: 680px;">
+                                <span style="font-size: 16px">
+                                    <a href="#" style="color: #2d64b3">{$_SESSION[admin][admin]}</a>
+                                </span>
+                                <span style="font-size: 14px; color: #858585">{$vo.ftime}</span>                                    
+                            </div>
+                            <div style="text-align: left">
+                                <span class="reply_fnote" style="font-size: 12px;">{$vo.fnote}</span>
+                            </div>
+                            <div style="text-align: right">
+                                <span style="font-size: 13px;cursor: pointer; text-align: right" class="reply_btn">回复</span>
+                                </div>
+                        
+                            
+                            </div>
+                            </if>
+                            </div>
+                    </div>
+                </volist>
+                <div class="reply_div" style="display:none">
+                <div style="padding: 10px 28px 10px 20px;">
+                    <div>
+                        <div class="reply_content"  contenteditable="true" style="padding-left: 5px;line-height: 18px; min-height: 56px;width: 100%;color: #000;border: 2px solid #D6DFFB;background-color: #fff;">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 10px 20px 10px 20px;text-align: right;font-size: 16px;font-weight: bold;">
+                    <input class="submitBtn" disabled="disabled" type="button" style="border: 1px solid white;background-color: rgb(81, 81, 219);height: 30px;width: 60px;cursor: pointer;" value="回复">
+                </div>
+                </div>
+            </div>
+        </div>

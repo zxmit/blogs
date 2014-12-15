@@ -1,0 +1,238 @@
+[ 2014-12-15T23:14:28+08:00 ] 127.0.0.1 /Blogs/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001978s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003970s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004152s ]
+SQL: SHOW COLUMNS FROM `blogs_notice` [ RunTime:0.003794s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.004146s ]
+SQL: SELECT * FROM `blogs_notice` LIMIT 1   [ RunTime:0.000324s ]
+SQL: SELECT * FROM `blogs_email` LIMIT 1   [ RunTime:0.000231s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state=1 )  [ RunTime:0.000348s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=1 and state=1  ) ORDER BY time  [ RunTime:0.000369s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=2 and state=1  ) ORDER BY time  [ RunTime:0.000349s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=3 and state=1  ) ORDER BY time  [ RunTime:0.000343s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=5 and state=1  ) ORDER BY time  [ RunTime:0.000326s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=6 and state=1  ) ORDER BY time  [ RunTime:0.000329s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=8 and state=1  ) ORDER BY time  [ RunTime:0.000309s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=9 and state=1  ) ORDER BY time  [ RunTime:0.000307s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: news D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001065s ]
+
+[ 2014-12-15T23:14:30+08:00 ] 127.0.0.1 /Blogs/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001424s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003777s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003756s ]
+SQL: SHOW COLUMNS FROM `blogs_notice` [ RunTime:0.003560s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.003573s ]
+SQL: SELECT * FROM `blogs_notice` LIMIT 1   [ RunTime:0.000311s ]
+SQL: SELECT * FROM `blogs_email` LIMIT 1   [ RunTime:0.000274s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state=1 )  [ RunTime:0.000323s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=1 and state=1  ) ORDER BY time  [ RunTime:0.000364s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=2 and state=1  ) ORDER BY time  [ RunTime:0.000406s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=3 and state=1  ) ORDER BY time  [ RunTime:0.000373s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=5 and state=1  ) ORDER BY time  [ RunTime:0.000331s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=6 and state=1  ) ORDER BY time  [ RunTime:0.000395s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=8 and state=1  ) ORDER BY time  [ RunTime:0.000273s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=9 and state=1  ) ORDER BY time  [ RunTime:0.000323s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: news D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2014-12-15T23:14:31+08:00 ] 127.0.0.1 /Blogs/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001952s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003801s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003936s ]
+SQL: SHOW COLUMNS FROM `blogs_notice` [ RunTime:0.003598s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.003996s ]
+SQL: SELECT * FROM `blogs_notice` LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT * FROM `blogs_email` LIMIT 1   [ RunTime:0.000242s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state=1 )  [ RunTime:0.000276s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=1 and state=1  ) ORDER BY time  [ RunTime:0.000320s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=2 and state=1  ) ORDER BY time  [ RunTime:0.000278s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=3 and state=1  ) ORDER BY time  [ RunTime:0.000331s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=5 and state=1  ) ORDER BY time  [ RunTime:0.000340s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=6 and state=1  ) ORDER BY time  [ RunTime:0.000338s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=8 and state=1  ) ORDER BY time  [ RunTime:0.000371s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=9 and state=1  ) ORDER BY time  [ RunTime:0.000398s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: news D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2014-12-15T23:14:32+08:00 ] 127.0.0.1 /Blogs/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001635s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.005017s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.004323s ]
+SQL: SHOW COLUMNS FROM `blogs_notice` [ RunTime:0.003731s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.003504s ]
+SQL: SELECT * FROM `blogs_notice` LIMIT 1   [ RunTime:0.000305s ]
+SQL: SELECT * FROM `blogs_email` LIMIT 1   [ RunTime:0.000215s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state=1 )  [ RunTime:0.000321s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=1 and state=1  ) ORDER BY time  [ RunTime:0.000353s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=2 and state=1  ) ORDER BY time  [ RunTime:0.000332s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=3 and state=1  ) ORDER BY time  [ RunTime:0.000314s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=5 and state=1  ) ORDER BY time  [ RunTime:0.000337s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=6 and state=1  ) ORDER BY time  [ RunTime:0.000291s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=8 and state=1  ) ORDER BY time  [ RunTime:0.000294s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=9 and state=1  ) ORDER BY time  [ RunTime:0.000285s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: news D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2014-12-15T23:14:33+08:00 ] 127.0.0.1 /Blogs/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001154s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003950s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003564s ]
+SQL: SHOW COLUMNS FROM `blogs_notice` [ RunTime:0.003420s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.003720s ]
+SQL: SELECT * FROM `blogs_notice` LIMIT 1   [ RunTime:0.000274s ]
+SQL: SELECT * FROM `blogs_email` LIMIT 1   [ RunTime:0.000226s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state=1 )  [ RunTime:0.000250s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=1 and state=1  ) ORDER BY time  [ RunTime:0.000299s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=2 and state=1  ) ORDER BY time  [ RunTime:0.000266s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=3 and state=1  ) ORDER BY time  [ RunTime:0.000251s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=5 and state=1  ) ORDER BY time  [ RunTime:0.000241s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=6 and state=1  ) ORDER BY time  [ RunTime:0.000235s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=8 and state=1  ) ORDER BY time  [ RunTime:0.000238s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=9 and state=1  ) ORDER BY time  [ RunTime:0.000283s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: news D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013116s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2014-12-15T23:14:33+08:00 ] 127.0.0.1 /Blogs/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001285s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003784s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003836s ]
+SQL: SHOW COLUMNS FROM `blogs_notice` [ RunTime:0.003372s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.003564s ]
+SQL: SELECT * FROM `blogs_notice` LIMIT 1   [ RunTime:0.000291s ]
+SQL: SELECT * FROM `blogs_email` LIMIT 1   [ RunTime:0.000227s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state=1 )  [ RunTime:0.000271s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=1 and state=1  ) ORDER BY time  [ RunTime:0.000391s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=2 and state=1  ) ORDER BY time  [ RunTime:0.000317s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=3 and state=1  ) ORDER BY time  [ RunTime:0.000262s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=5 and state=1  ) ORDER BY time  [ RunTime:0.000261s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=6 and state=1  ) ORDER BY time  [ RunTime:0.000335s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=8 and state=1  ) ORDER BY time  [ RunTime:0.000286s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=9 and state=1  ) ORDER BY time  [ RunTime:0.000274s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: news D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2014-12-15T23:14:34+08:00 ] 127.0.0.1 /Blogs/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `blogs_type` [ RunTime:0.003936s ]
+SQL: SHOW COLUMNS FROM `blogs_news` [ RunTime:0.003738s ]
+SQL: SHOW COLUMNS FROM `blogs_notice` [ RunTime:0.003550s ]
+SQL: SHOW COLUMNS FROM `blogs_email` [ RunTime:0.003602s ]
+SQL: SELECT * FROM `blogs_notice` LIMIT 1   [ RunTime:0.000302s ]
+SQL: SELECT * FROM `blogs_email` LIMIT 1   [ RunTime:0.000199s ]
+SQL: SELECT * FROM `blogs_type` WHERE ( state=1 )  [ RunTime:0.000273s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=1 and state=1  ) ORDER BY time  [ RunTime:0.000331s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=2 and state=1  ) ORDER BY time  [ RunTime:0.000303s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=3 and state=1  ) ORDER BY time  [ RunTime:0.000283s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=5 and state=1  ) ORDER BY time  [ RunTime:0.000316s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=6 and state=1  ) ORDER BY time  [ RunTime:0.000289s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=8 and state=1  ) ORDER BY time  [ RunTime:0.000285s ]
+SQL: SELECT `id`,`title`,`time` FROM `blogs_news` WHERE ( type=9 and state=1  ) ORDER BY time  [ RunTime:0.000491s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: news D:\wamp\www\Blogs\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013351s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000767s ]
+

@@ -1,0 +1,26 @@
+<div style="width:6%;float:left;">
+        <div style="margin-left: 10px;margin-top:4px;">
+            <if condition="$new == 1">
+                <button class="new_note" style="width:60px;height: 22px;" disabled="disabled">最新留言</button>
+                <else/>
+                <button class="new_note" style="width:60px;height: 22px;">最新留言</button>
+                </if></div>
+    </div>
+    <div style="width:6%;float:left;">
+        <div style="margin-left: 5px;margin-top:4px;">
+            <if condition="$all == 1">
+                <button class="all_note" style="width:60px;height: 22px;" disabled="disabled">全部留言</button>
+                <else/>
+                <button class="all_note" style="width:60px;height: 22px;" >全部留言</button>
+            </if>
+            </div>
+    </div>
+    <div style="width:6%;float:left;">
+        <div style="margin-top:4px;">
+            <if condition="$theme == 1">
+            <button  class="theme_note" style="width:70px;height: 22px;" disabled="disabled" >按主题查询</button>
+            <else/>
+            <button  class="theme_note" style="width:70px;height: 22px;">按主题查询</button>
+            </if>
+        </div>
+    </div>
